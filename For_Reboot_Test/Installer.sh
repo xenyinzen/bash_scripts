@@ -1,5 +1,6 @@
 #!/bin/sh
-cd /media/usbdisk-sdb1
+DIR=$(pwd)  # $(dirname $0)
+cd $DIR
 konsole -e "./test.sh"
 wait
 
