@@ -1,5 +1,0 @@
-#!/bin/sh
-
-mount -o rw,remount /
-cd /root
-./do_reboot.sh & 

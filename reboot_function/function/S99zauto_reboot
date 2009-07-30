@@ -1,0 +1,6 @@
+#!/bin/sh
+mount -o rw,remount /
+
+SUDO=`which sudo`
+cd /root
+$SUDO ./do_reboot.sh & 

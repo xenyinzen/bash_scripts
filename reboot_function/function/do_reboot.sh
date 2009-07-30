@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sleep 30
+sleep 20
 
 FILE="/root/times.txt"
 
@@ -9,7 +9,7 @@ if [ ! -e ${FILE} ]; then
 fi
 
 T=`cat ${FILE}`
-if [ $T -lt "51" ]; then
+if [ $T -lt "201" ]; then
 	T=`expr $T + 1`
 	echo "Reboot times: $T"
 	echo $T > $FILE
@@ -20,10 +20,10 @@ if [ $T -lt "51" ]; then
 fi
 
 echo "Reboot test finished, Now clean..."
-if [ -e /etc/rc2.d/S99zauto_reboot ]; then
+if [ -e /etc/X11/Xsession.d/95zauto_reboot ]; then
 	rm $FILE
 	rm /root/do_reboot.sh
-	rm /etc/rc2.d/S99zauto_reboot
+	rm /etc/X11/Xsession.d/95zauto_reboot
 fi
 echo "Cleaning finished."
 
