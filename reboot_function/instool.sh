@@ -1,8 +1,9 @@
 #!/bin/sh
 . ./config.sh
 
-echo Begin to install.
+mount -o rw,remount /
 
+echo Begin to install.
 # copy main reboot file
 echo "Copy $MDIR/$MFILE"
 cp -avf $MDIR/$MFILE $DDIR

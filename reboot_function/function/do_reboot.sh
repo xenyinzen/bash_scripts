@@ -16,7 +16,7 @@ if [ $T -lt "201" ]; then
 	echo I will reboot in 3 seconds...
 	sleep 3
 	reboot
-	sleep 1000
+	sleep 36000000
 fi
 
 echo "Reboot test finished, Now clean..."
